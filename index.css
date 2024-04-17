@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: linear-gradient(to left,rgb(120, 242, 104) 0%,orange 50%,pink 100%);
+    
+}
+
+h1{
+    margin-top: 2rem;
+    color: rgb(249, 3, 44);
+    text-align: center; 
+     font-size: 4rem;
+    font-weight: 5rem;
+}
+
+#inpcon{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height:13rem;
+    width: 500px;
+    background: linear-gradient(to top ,blue 0%, yellow 25%, red 50%,yellow 75%,blue 80%,rgb(83, 207, 238) 100%);
+    border-radius: 1rem;
+    border: 0.2rem ;
+}
+
+#inpcon input{
+    border-radius: 0.3rem;
+}
+#i1 {
+    margin:  0.5rem 0 0.5rem 0;
+    height: 1.5rem;
+}
+#i1:hover{
+    height: 2rem;
+}
+
+#i2 {
+    margin:  0.5rem 0 0.5rem 0;
+    height: 3rem;
+}
+
+#i2:hover{
+    height: 5rem;
+}
+#inpcon button{
+    padding: 0.5rem;
+    width: 6rem;
+    border-radius: 0.6rem;
+    position: relative;
+    left:12rem;
+    font-weight: 900;
+    font-size: 1rem;
+}
+#inpcon button:hover{
+    padding: 0.5rem;
+    width: 7rem;
+    border-radius: 0.6rem;
+    position: relative;
+    left:12rem;
+    font-weight: 900;
+    font-size: 1rem;
+    background-color: brown;
+    color: aliceblue;
+}
+
+#tb{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    position: absolute;
+    top:6rem;
+    right: 0;
+    width: 550px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+   
+}
+#tb .td0{
+    width:1rem;
+    margin-right: 3rem
+}
+#tb .td1{
+    width:5rem;
+    margin-left: 1.5rem;
+    max-width: 7rem;
+    margin-right: 3rem;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+ #tb .td2{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: 300;
+    font-size: 1rem;
+    overflow: scroll;
+    width:5rem;
+    max-width:10rem;
+    scrollbar-width: none;
+ }
+
+ #tb .td3{
+    padding: 0.5rem;
+    height: 1.5rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    width:3rem;
+    background-color: aliceblue;
+ }
+
+ #tb .td3:hover{
+    padding: 0.5rem;
+    height: 2.1rem;
+    width: 5.5rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: brown;
+    color: beige;
+ }
+
+ @media screen and (max-width:800px) {
+    #inpcon{
+        position: relative;
+        left:0.1rem;
+        width: 350px;
+    }
+    #tb{
+        position: absolute;
+        left:0;
+        width: 360px;
+    }
+}
+
+@media screen and (max-width:1080px) {
+  
+    #tb{
+        position: absolute;
+        left:0;
+        top:22rem;
+        width: 350px;
+    }
+}
