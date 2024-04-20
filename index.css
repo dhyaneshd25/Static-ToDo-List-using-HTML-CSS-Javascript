@@ -109,6 +109,7 @@ h1{
  #tb .td3{
     padding: 0.5rem;
     height: 1.5rem;
+    max-height: 2rem;
     border-radius: 0.6rem;
     font-weight: 600;
     font-size: 1rem;
@@ -119,6 +120,7 @@ h1{
  #tb .td3:hover{
     padding: 0.5rem;
     height: 2.1rem;
+    max-height: 2.5rem;
     width: 5.5rem;
     border-radius: 0.6rem;
     font-weight: 600;
