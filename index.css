@@ -2,17 +2,31 @@
     margin:0;
     padding:0;
 }
+
 body{
-    background: linear-gradient(to left,rgb(120, 242, 104) 0%,orange 50%,pink 100%);
+    background: linear-gradient(to left,rgb(120, 242, 104) 0%,orange 20%,pink 100%);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     
 }
 
 h1{
     margin-top: 2rem;
     color: rgb(249, 3, 44);
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: center; 
      font-size: 4rem;
     font-weight: 5rem;
+    box-shadow: 2px 2px 1000px 200px white;
+    border: 2px dotted white;
+    border-radius: 15px;
+    padding: 3px;
 }
 
 #inpcon{
@@ -22,48 +36,52 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
     height:13rem;
     width: 500px;
     background: linear-gradient(to top ,blue 0%, yellow 25%, red 50%,yellow 75%,blue 80%,rgb(83, 207, 238) 100%);
     border-radius: 1rem;
-    border: 0.2rem ;
+    border: 0.2rem dotted white;
+    box-shadow: 2px 50px 100px 100px greenyellow;
+    
 }
 
 #inpcon input{
     border-radius: 0.3rem;
 }
 #i1 {
+    width: 100%;
     margin:  0.5rem 0 0.5rem 0;
     height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 #i1:hover{
     height: 2rem;
 }
 
 #i2 {
+    width: 100%;
     margin:  0.5rem 0 0.5rem 0;
     height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 #i2:hover{
     height: 5rem;
 }
-#inpcon button{
+.btn{
     padding: 0.5rem;
     width: 6rem;
     border-radius: 0.6rem;
-    position: relative;
-    left:12rem;
     font-weight: 900;
     font-size: 1rem;
 }
-#inpcon button:hover{
+.btn:hover{
     padding: 0.5rem;
     width: 7rem;
     border-radius: 0.6rem;
-    position: relative;
-    left:12rem;
     font-weight: 900;
     font-size: 1rem;
     background-color: brown;
@@ -71,63 +89,88 @@ h1{
 }
 
 #tb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 0.5rem;
-    position: absolute;
-    top:6rem;
-    right: 0;
     width: 550px;
     font-weight: 400;
     font-size: 1.5rem;
     border-radius: 1rem;
-   
+   z-index: 1;
+   position: relative;
+   bottom: 2rem;
 }
-#tb .td0{
-    width:1rem;
-    margin-right: 3rem
+
+.row{
+    display: flex;
+    height: 5rem;
+    width:100%;
+    max-width: 550px;
+    max-height: 5rem;
+
 }
-#tb .td1{
-    width:5rem;
-    margin-left: 1.5rem;
+
+.row td{
+    overflow: scroll;
+    scrollbar-width: none;
+    border: 2px solid rgb(76, 0, 255);
+    padding: 0.2rem;
+}
+.row #t0{
+    width: 5rem;
+    max-width: 5rem;
+    min-width: 5rem;
+    
+}
+
+.row #t2{
+    width:15rem;
+    max-width: 15rem;
+    min-width: 15rem;
+    overflow: scroll;
+}
+
+.row #t1{
+    width: 15rem;
+    max-width: 15rem;
+    min-width: 15rem;
+    overflow: scroll;
+}
+
+.row #t3{
+    width: 7rem;
     max-width: 7rem;
-    margin-right: 3rem;
+    min-width: 7rem;
     overflow: scroll;
-    scrollbar-width: none;
 }
- #tb .td2{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-weight: 300;
-    font-size: 1rem;
-    overflow: scroll;
-    width:5rem;
-    max-width:10rem;
-    scrollbar-width: none;
- }
 
- #tb .td3{
-    padding: 0.5rem;
-    height: 1.5rem;
-    max-height: 2rem;
-    border-radius: 0.6rem;
-    font-weight: 600;
-    font-size: 1rem;
-    width:3rem;
-    background-color: aliceblue;
- }
+#tablebody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 
- #tb .td3:hover{
-    padding: 0.5rem;
-    height: 2.1rem;
-    max-height: 2.5rem;
-    width: 5.5rem;
-    border-radius: 0.6rem;
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: brown;
-    color: beige;
- }
+#th td{
+    border: 2px dotted white;
+    color:rgb(249, 3, 44);
+    font-size: 2rem;
+    font-weight: 800;
+    padding-top: 0.5rem;
+}
+
+@media screen and (max-width:970px) {
+    #tb .row{
+        width: 360px;
+        max-width: 360px;
+        position: relative;
+        left: -10rem;
+    }
+}
 
  @media screen and (max-width:800px) {
     #inpcon{
@@ -135,19 +178,74 @@ h1{
         left:0.1rem;
         width: 350px;
     }
-    #tb{
-        position: absolute;
-        left:0;
+    #tb .row{
         width: 360px;
+        max-width: 360px;
+        position: relative;
+        left: -3rem;
+    }
+    .row #t0{
+        width: 2rem;
+        max-width: 2rem;
+        min-width: 2rem;
+        overflow: auto;
+    }
+    
+    .row #t2{
+        width:10rem;
+        max-width: 10rem;
+        min-width: 10rem;
+        overflow: scroll;
+    }
+    
+    .row #t1{
+        width: 8rem;
+        max-width: 8rem;
+        min-width: 8rem;
+        overflow: scroll;
+    }
+    
+    .row #t3{
+        width: 6rem;
+        max-width: 6rem;
+        min-width: 6rem;
+        overflow: scroll;
     }
 }
 
-@media screen and (max-width:1080px) {
-  
-    #tb{
-        position: absolute;
-        left:0;
-        top:22rem;
-        width: 350px;
+@media screen and (max-width:466px) {
+   #tb .row{
+    width: 360px;
+    max-width: 360px;
+    position: relative;
+    left: -1rem;
+}
+
+    .row #t0{
+        width: 2rem;
+        max-width: 2rem;
+        min-width: 2rem;
+        overflow: auto;
+    }
+    
+    .row #t2{
+        width:10rem;
+        max-width: 10rem;
+        min-width: 10rem;
+        overflow: scroll;
+    }
+    
+    .row #t1{
+        width: 5rem;
+        max-width: 5rem;
+        min-width: 5rem;
+        overflow: scroll;
+    }
+    
+    .row #t3{
+        width: 6rem;
+        max-width: 6rem;
+        min-width: 6rem;
+        overflow: scroll;
     }
 }

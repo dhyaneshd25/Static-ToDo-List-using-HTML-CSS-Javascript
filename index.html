@@ -13,12 +13,22 @@
   <h1>TO-DO List</h1>
   <div id="inpcon">
   <input  type="text" id="i1" placeholder="Enter TO-DO">
-  <input type="text" id="i2" placeholder="Write Small Description">
+  <textarea id="i2" placeholder="Write Small Description"></textarea>
   <br>
-  <button id="add">ADD</button>
+  <button id="add" class="btn">ADD</button>
   </div>
   <table id="tb" >
-     
+     <thead>
+      <tr class="row" id="th">
+        <td id="t0">Sr.No.</td>
+        <td id="t1">TO-DO's</td>
+        <td id="t2">Description</td>
+        <td id="t3">Action</td>
+      </tr>
+     </thead>
+     <tbody id="tablebody">
+  
+     </tbody>
   </table>
 </body>
 <script src="index.js"></script>

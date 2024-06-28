@@ -8,16 +8,16 @@ function deleteitem(index){
     localStorage.setItem('itemJSON', JSON.stringify(iAA));
     stt = localStorage.getItem('itemJSON');
     iAA = JSON.parse(stt);
-    let t = document.getElementById('tb')
+    let t = document.getElementById('tablebody')
   let sr = "";
   
   iAA.forEach((ele, ind) => {
     if(ind>=0){
-        t.style="display:flex";
+        t.style="visibility:visible";
         }else{
-            t.style="display:none";
+            t.style="visibility:hidden";
         }
-        sr += `<tr>  <td class="td0">${ind+1}.</td><td class="td1">${ele[0]}</td>  <td class="td2">${ele[1]}</td>  <td  class="td3" onclick="deleteitem(${ind})">Delete</td>  </tr > ` 
+        sr += `<tr class="row">  <td id="t0">${ind+1}.</td><td id="t1">${ele[0]}</td>  <td id="t2">${ele[1]}</td>  <td  id="t3"><button class="btn" onclick="deleteitem(${index})">Delete</button></td>  </tr > ` 
 
   });
 
@@ -27,6 +27,7 @@ ad = document.getElementById('add');
 ad.addEventListener('click', () => {
   f = document.getElementById('i1').value;
   s = document.getElementById('i2').value;
+  
   if (localStorage.getItem('itemJSON') == null) {
     iA = [];
     iA.push([f, s]);
@@ -44,7 +45,7 @@ ad.addEventListener('click', () => {
     iA.push([f, s]);
     localStorage.setItem('itemJSON', JSON.stringify(iA));
   }
-  let t = document.getElementById('tb')
+  let t = document.getElementById('tablebody')
   let sr = "";
   
   iA.forEach((element, index) => {
@@ -54,11 +55,12 @@ ad.addEventListener('click', () => {
         }else{
             t.style="display:none";
         }
-    sr += `<tr>  <td class="td0">${index+1}.</td><td class="td1">${element[0]}</td>  <td class="td2">${element[1]}</td>  <td  class="td3" onclick="deleteitem(${index})">Delete</td>  </tr > ` 
+    sr += `<tr class="row">  <td id="t0">${index+1}.</td><td id="t1">${element[0]}</td>  <td id="t2">${element[1]}</td>  <td  id="t3" ><button class="btn" onclick="deleteitem(${index})">Delete</button></td>  </tr > ` 
 
   });
 
   t.innerHTML = sr;
 
-
+  document.getElementById("i1").value="";
+  document.getElementById("i2").value="";
 })
